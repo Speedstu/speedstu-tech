@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#111517">
+  <meta name="speedstu-version" content="6.0 — Aerospace">
+  <meta name="description" content="Speedstu : mes projets personnels autour de Rocket League, Trackmania, l’apprentissage par renforcement et des outils GPU AMD.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Speedstu — Mes projets">
+  <meta property="og:description" content="Bots Rocket League, simulation Trackmania et outils GPU AMD.">
+  <meta property="og:image" content="https://speedstu.tech/assets/hero-rafale.webp">
+  <link rel="canonical" href="https://speedstu.tech/">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="preload" href="assets/hero-rafale.webp" as="image" type="image/webp">
+  <link rel="stylesheet" href="styles.css?v=6.1.0">
+  <script src="script.js?v=6.1.0" defer></script>
+  <title>Speedstu — Mes projets</title>
+</head>
+<body>
+<a class="skip-link" href="#work" data-i18n="skip">Aller aux projets</a>
+<header class="site-header" id="header">
+  <a href="#home" class="brand" aria-label="Speedstu — accueil"><span class="brand-accent"></span>SPEEDSTU</a>
+  <nav class="desktop-nav" aria-label="Navigation principale">
+    <a href="#intro" data-i18n="navAbout">Présentation</a>
+    <a href="#work" data-i18n="navWork">Projets</a>
+    <a href="#expertise" data-i18n="navExpertise">Technos</a>
+    <a href="#contact" data-i18n="navContact">Contact</a>
+  </nav>
+  <div class="header-actions">
+    <button class="lang-button" type="button" id="language" aria-label="Switch to English"><span class="active-lang">FR</span><span class="language-sep">/</span><span class="other-lang">EN</span></button>
+    <a class="header-github" href="https://github.com/Speedstu" target="_blank" rel="noopener noreferrer" aria-label="Profil GitHub Speedstu">GitHub <span aria-hidden="true">↗</span></a>
+    <button class="menu-button" id="menu-button" type="button" aria-label="Ouvrir le menu" aria-controls="menu" aria-expanded="false"><span></span><span></span></button>
+  </div>
+</header>
+<div class="menu-panel" id="menu" aria-hidden="true">
+  <div class="menu-panel-top"><span>SPEEDSTU / INDEX</span><span>2026</span></div>
+  <nav aria-label="Menu mobile">
+    <a href="#intro"><span>01</span><span data-i18n="navAbout">Présentation</span><span>↗</span></a>
+    <a href="#work"><span>02</span><span data-i18n="navWork">Projets</span><span>↗</span></a>
+    <a href="#expertise"><span>03</span><span data-i18n="navExpertise">Technos</span><span>↗</span></a>
+    <a href="#contact"><span>04</span><span data-i18n="navContact">Contact</span><span>↗</span></a>
+  </nav>
+  <a href="https://github.com/Speedstu" target="_blank" rel="noopener noreferrer" class="menu-github">github.com/Speedstu ↗</a>
+</div>
+<main>
+  <section class="hero" id="home" aria-labelledby="hero-title">
+    <div class="hero-bg" role="img" aria-label="Composition aéronautique monochrome représentant un avion Rafale"></div>
+    <div class="hero-shade"></div>
+    <div class="hero-grid-lines" aria-hidden="true"></div>
+    <div class="hero-topline"><span data-i18n="heroTop">PORTFOLIO PERSONNEL / 2026</span><span class="hero-topright">ROCKET LEAGUE · TRACKMANIA · GPU</span></div>
+    <div class="hero-content">
+      <div class="eyeline"><span class="red-stroke"></span><span data-i18n="heroEyeline">MES PROJETS / 2026</span></div>
+      <h1 id="hero-title"><span data-i18n="heroLine1">SPEEDSTU.</span><span class="hero-outline" data-i18n="heroLine2">MES PROJETS.</span></h1>
+      <p data-i18n="heroDescription">Je développe des bots Rocket League, des simulateurs Trackmania et des outils pour GPU AMD. J’ai rassemblé ici les projets sur lesquels je travaille.</p>
+      <a href="#intro" class="hero-cta"><span data-i18n="discover">Voir mes projets</span><span class="cta-round" aria-hidden="true">↗</span></a>
+    </div>
+    <div class="hero-bottomline"><span data-i18n="heroBottom">PROJETS PERSONNELS / SPEEDSTU.TECH</span><a href="#intro"><span data-i18n="scroll">DÉFILER</span><span aria-hidden="true">↓</span></a></div>
+  </section>
+
+  <section class="intro" id="intro">
+    <div class="container intro-wrapper">
+      <div class="section-kicker"><span class="red-stroke"></span><span>01 / <span data-i18n="introLabel">PRÉSENTATION</span></span></div>
+      <div class="intro-layout">
+        <h2 data-i18n="introTitle">Bots Rocket League, simulations et outils système.</h2>
+        <div class="intro-side"><p data-i18n="introText">Je passe pas mal de temps sur Rocket League, Trackmania et les GPU AMD. J’aime comprendre la physique, entraîner des agents et construire les outils qui vont avec.</p><p data-i18n="introText2">Certains projets sont publics sur GitHub, d’autres sont encore en cours et restent privés.</p><a class="text-link" href="https://github.com/Speedstu" target="_blank" rel="noopener noreferrer"><span data-i18n="seeGithub">Voir mes dépôts GitHub</span><span>↗</span></a></div>
+      </div>
+      <div class="expertise-stripe" aria-label="Technos de travail"><div><span>01</span><strong data-i18n="field1">Simulation physique</strong></div><div><span>02</span><strong data-i18n="field2">Agents autonomes</strong></div><div><span>03</span><strong data-i18n="field3">GPU & logiciel bas niveau</strong></div></div>
+    </div>
+  </section>
+
+  <!-- V1 scroll transition restored: original aircraft + left-to-right keyframes + upward reveal. -->
+  <section class="flight-section flight-v1" id="flight" aria-label="Transition Rafale au défilement">
+    <div class="flight-stage" id="flight-stage">
+      <div class="flight-stars" aria-hidden="true"></div>
+      <div class="flight-horizon" aria-hidden="true"></div>
+      <div class="flight-heading" aria-hidden="true"><span>SPEEDSTU</span><span>PORTFOLIO</span></div>
+      <div class="contrail contrail-one" aria-hidden="true"></div>
+      <div class="contrail contrail-two" aria-hidden="true"></div>
+      <img src="assets/rafale-v1.webp" id="flight-jet" class="flight-plane" width="1672" height="929" alt="Illustration d’un Rafale passant de gauche à droite" decoding="async">
+      <div class="flight-caption"><span>RAFALE</span><span> / SCROLL</span></div>
+      <div class="flight-ticks"><span>speedstu.tech</span><span id="flight-pct">00%</span></div>
+      <div class="flight-wipe" id="flight-wipe" aria-hidden="true">
+        <span class="wipe-kicker">02 / SPEEDSTU</span>
+        <span class="wipe-title" data-i18n="flightReveal">MES PROJETS.</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="work-heading" id="work">
+    <div class="container">
+      <div class="section-kicker"><span class="red-stroke"></span><span>02 / <span data-i18n="workLabel">RÉALISATIONS</span></span></div>
+      <div class="work-heading-grid"><h2 data-i18n="workTitle">Mes projets.</h2><p data-i18n="workCopy">Une sélection de mes projets. Les dépôts publics sont directement accessibles sur GitHub.</p></div>
+    </div>
+  </section>
+
+  <section class="project project-velocity" aria-labelledby="velocity-title">
+    <div class="project-visual scene-rocket">
+      <img class="external-photo" src="https://www.techspot.com/images/products/2015/pc-games/org/2015-07-15-product-7.jpg" alt="Capture illustrative du jeu Rocket League" loading="lazy" referrerpolicy="no-referrer">
+      <div class="visual-fallback" aria-hidden="true"><span>RL</span><strong>ROCKET<br>LEAGUE</strong></div>
+      <span class="photo-credit" data-i18n="rocketCredit">Visuel du jeu Rocket League, non du bot</span>
+    </div>
+    <div class="project-copy">
+      <div class="project-meta"><span>PROJET / 01</span><span data-i18n="private">DÉPÔT PRIVÉ</span></div>
+      <div class="project-inner"><p class="project-kind" data-i18n="velocityKind">ENTRAÎNEMENT D'AGENTS</p><h3 id="velocity-title">VelocityRL</h3><p class="project-description" data-i18n="velocityText">Un environnement de travail pour entraîner et évaluer des agents Rocket League, avec PPO, V-trace, self-play et différents backends de simulation.</p><div class="specs"><span>RLGym</span><span>RocketSim</span><span>Python / C++</span></div></div>
+      <div class="project-bottom"><span data-i18n="velocityBottom">Développement privé · présentation du projet</span><span class="project-arrow" aria-hidden="true">01</span></div>
+    </div>
+  </section>
+
+  <section class="project project-trackmania" aria-labelledby="tm-title">
+    <div class="project-copy">
+      <div class="project-meta"><span>PROJET / 02</span><span data-i18n="public">OPEN SOURCE</span></div>
+      <div class="project-inner"><p class="project-kind" data-i18n="tmKind">SIMULATION & CONTRÔLE</p><h3 id="tm-title">TM2020-Sim</h3><p class="project-description" data-i18n="tmText">Une simulation Trackmania sans interface graphique, avec un SDK C++/Rust, un moteur physique Gearbox et des contrôleurs capables de suivre des trajectoires.</p><div class="specs"><span>C++ / Rust</span><span>Gearbox</span><span>100 Hz</span></div><a class="project-action" href="https://github.com/Speedstu/TM2020-Sim-V1" target="_blank" rel="noopener noreferrer"><span data-i18n="openRepo">Voir le dépôt GitHub</span><span>↗</span></a></div>
+      <div class="project-bottom"><span data-i18n="tmBottom">Les contrôleurs publiés ne sont pas des politiques PPO.</span><span class="project-arrow" aria-hidden="true">02</span></div>
+    </div>
+    <div class="project-visual scene-track">
+      <img class="external-photo" src="https://cdn-s-www.dna.fr/images/f40c51d1-4785-4ab3-b001-650fc8068970/NW_raw/avec-sa-bosse-centrale-ce-nouveau-bloc-de-route-est-plus-novateur-qu-il-n-y-parait-capture-d-ecran-trackmania-1593591987.jpg" alt="Capture illustrative du jeu Trackmania 2020" loading="lazy" referrerpolicy="no-referrer">
+      <div class="visual-fallback" aria-hidden="true"><span>TM</span><strong>TRACK<br>MANIA</strong></div>
+      <span class="photo-credit" data-i18n="trackCredit">Capture du jeu Trackmania, non du simulateur</span>
+    </div>
+  </section>
+
+  <section class="project project-cuda" aria-labelledby="cuda-title">
+    <div class="project-visual scene-gpu">
+      <img class="external-photo" src="https://www.amd.com/content/dam/amd/en/images/products/graphics/radeon-rx-9060xt/3248000-radeon-rx-9060xt-product.jpg" alt="Photographie produit d'une carte graphique AMD Radeon RX 9060 XT" loading="lazy">
+      <div class="visual-fallback" aria-hidden="true"><span>GPU</span><strong>AMD<br>RADEON</strong></div>
+      <span class="photo-credit" data-i18n="gpuCredit">Visuel produit AMD — RX 9060 XT</span>
+    </div>
+    <div class="project-copy">
+      <div class="project-meta"><span>PROJET / 03</span><span data-i18n="public">OPEN SOURCE</span></div>
+      <div class="project-inner"><p class="project-kind" data-i18n="cudaKind">COMPATIBILITÉ GPU / WINDOWS</p><h3 id="cuda-title">CUDA for AMD<br>on Windows</h3><p class="project-description" data-i18n="cudaText">Une pile de compatibilité basée sur ZLUDA et HIP pour exécuter certaines charges CUDA sur des GPU AMD sous Windows. Avec des tests pour distinguer une vraie exécution GPU d'un résultat incorrect.</p><div class="specs"><span>ZLUDA</span><span>HIP / ROCm</span><span>Windows</span></div><a class="project-action" href="https://github.com/Speedstu/CUDA-for-AMD-Windows" target="_blank" rel="noopener noreferrer"><span data-i18n="openRepo">Voir le dépôt GitHub</span><span>↗</span></a></div>
+      <div class="project-bottom"><span data-i18n="cudaBottom">Compatibilité partielle et dépendante des charges testées.</span><span class="project-arrow" aria-hidden="true">03</span></div>
+    </div>
+  </section>
+
+  <section class="more-projects">
+    <div class="container">
+      <div class="section-kicker"><span class="red-stroke"></span><span>03 / <span data-i18n="moreLabel">AUTRES PROJETS</span></span></div>
+      <div class="more-heading"><h2 data-i18n="moreTitle">Autres projets.</h2><a href="https://github.com/Speedstu?tab=repositories" target="_blank" rel="noopener noreferrer" class="text-link"><span data-i18n="allRepos">Tous les dépôts</span><span>↗</span></a></div>
+      <div class="project-list">
+        <a href="https://github.com/Speedstu/RocketLearnNative" target="_blank" rel="noopener noreferrer"><span class="list-index">04</span><strong>RocketLearnNative</strong><span data-i18n="native">Entraînement Rocket League en C++ / Rust</span><span class="list-arrow">↗</span></a>
+        <a href="https://github.com/Speedstu/EvilRLBot" target="_blank" rel="noopener noreferrer"><span class="list-index">05</span><strong>EvilRLBot</strong><span data-i18n="evil">Lanceur de matchs et bots RLBot v4/v5</span><span class="list-arrow">↗</span></a>
+        <a href="https://github.com/Speedstu/infinite-airdribble-rocket-league-bot" target="_blank" rel="noopener noreferrer"><span class="list-index">06</span><strong>Infinite Airdribble</strong><span data-i18n="airdribble">Bot spécialisé dans le contrôle aérien</span><span class="list-arrow">↗</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="expertise" id="expertise"><div class="container"><div class="section-kicker"><span class="red-stroke"></span><span>04 / <span data-i18n="expertiseLabel">DOMAINES</span></span></div><div class="expertise-grid"><h2 data-i18n="expertiseTitle">Ce que j’utilise.</h2><div class="expertise-details"><div><span>01</span><h3 data-i18n="ex1">Simulation</h3><p data-i18n="ex1Text">Moteurs physiques, exécution sans rendu et comparaison de trajectoires.</p></div><div><span>02</span><h3 data-i18n="ex2">Apprentissage par renforcement</h3><p data-i18n="ex2Text">Entraînement de politiques, auto-jeu et évaluation reproductible.</p></div><div><span>03</span><h3 data-i18n="ex3">Systèmes & GPU</h3><p data-i18n="ex3Text">C++, Rust, Python, compatibilité logicielle et tests de justesse.</p></div></div></div></div></section>
+
+  <section class="contact" id="contact"><div class="container contact-grid"><div><div class="section-kicker"><span class="red-stroke"></span><span>05 / CONTACT</span></div><h2 data-i18n="contactTitle">À propos.</h2><p data-i18n="contactText">Je suis étudiant en cybersécurité. Je développe ces projets sur mon temps libre, et je publie le code de ceux que je peux partager sur GitHub.</p></div><a class="contact-link" href="https://github.com/Speedstu" target="_blank" rel="noopener noreferrer">github.com/Speedstu <span>↗</span></a></div></section>
+</main>
+<footer class="footer"><div class="container footer-layout"><a href="#home" class="footer-brand">SPEEDSTU<span>.</span></a><span>© <span id="year">2026</span> / SPEEDSTU</span><span data-i18n="independent">Portfolio indépendant. Marques et jeux cités appartenant à leurs titulaires.</span><a href="#home" data-i18n="back">Retour en haut ↑</a></div></footer>
+</body>
+</html>
