@@ -1,37 +1,42 @@
 # speedstu.tech
 
-Personal portfolio for Rocket League bots, Trackmania simulation, and CUDA compatibility projects on AMD GPUs.
+Personal portfolio for Rocket League bots, Trackmania simulation, and AMD GPU experiments. Static site deployed on GitHub Pages.
 
-## V10 — Editorial
+## V11 — Aether
 
-A deliberately quiet black-and-off-white layout. The design draws inspiration from minimalist editorial portfolios (including Voidfolio, Galery, DiazX) without copying their code or using a commercial template.
+An original interactive installation inspired by the **craft** rather than the code or assets of [mindcorpus.org](https://mindcorpus.org/) and a user-supplied web design video:
 
-- `index.html` — single accessible document, all English
-- `v10.css` — typography, editorial gallery layouts, mobile breakpoints
-- `v10.js` — native WebGL backdrop, scroll timing, subtle interactions and reduced-motion control
-- `assets/rafale-v1.webp` — translucent Rafale artwork within the hero
-- `assets/marin-kitagawa.webp` — full-screen owner-supplied manga artwork, shown **without text**
-- three featured projects: VelocityRL (private), TM2020-Sim and CUDA for AMD on Windows
-- links to additional public GitHub repositories, and two owner-selected YouTube Music links in About
+- **One shared scene** across the entire page with a custom WebGL particle renderer.
+- Thousands of actual GPU-rendered particles: depth-graded dust, five-petal blossom sprites, and a connected 3D node network.
+- Scroll-linked spatial morphing from neural network to a flowing particle field, and a translucent Rafale illustration.
+- Pointer interaction that bends the particle field; click the open hero area to make a short ripple.
+- Three curated, lightweight project previews with subtle 3D pointer tilt, Trackmania movement and a compute-grid animation.
+- The owner's black-and-white Marin Kitagawa image appears as a completely silent **full-screen interlude**, with no overlaid text.
+- All text is in English. The About section contains only the two requested YouTube Music links.
+- Reduced-motion support, semantic anchors, keyboard-accessible menus and controls.
+- Mobile fallback uses a lightweight 2D canvas instead of WebGL. Motion is capped at about 30 fps, device pixel ratio is capped at 1.5.
+- No external fonts, JavaScript packages, tracking, cookies or image APIs. All visual assets are local.
 
-The 3D renderer uses native WebGL (no external animation library or remote CDN). It is disabled on narrow screens and drawing stops after the hero is offscreen. Interaction should never block keyboard access or content readability.
+### Source files
 
-### Preview
+- `index.html` — content, navigation, accessible SVG illustrations.
+- `v11.css` — responsive layout and art direction.
+- `v11.js` — WebGL/canvas particle engine, pointer/scroll coordination and project interactions.
+- `assets/rafale-v1.webp` — Rafale artwork.
+- `assets/marin-kitagawa.webp` — owner-provided manga illustration.
 
-Open `index.html` directly or serve from the repository directory:
+### Local preview
 
 ```sh
 python -m http.server 8000
 ```
 
-Then visit http://localhost:8000.
+Visit `http://localhost:8000`. No build tools required.
 
-### Deployment
+### Deployment and security
 
-This repository is deployed through GitHub Pages to speedstu.tech. DNS and `CNAME` are handled separately. **Never commit API keys, passwords, tokens, or `.env` files.**
+Pushing `main` publishes this static site via GitHub Pages to **speedstu.tech**. DNS remains managed separately at Name.com.
 
-### Media
+Never add credentials or `.env` files to this repository. The site has no analytics, form submission or third-party API calls. Images of games and characters are used as thematic artwork; the project diagrams are illustrations rather than measurements, benchmarks or footage of the bots.
 
-The Rafale visual belongs to the site assets. The Marin image was supplied by the site owner for visual use. The project SVGs are abstract, illustrative interaction studies — not bot footage or benchmark measurements.
-
-Older versions remain available through Git history.
+Past versions remain in Git history.
