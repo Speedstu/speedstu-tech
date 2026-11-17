@@ -1,11 +1,13 @@
-# Local-only browser checks and temporary artifacts
+# Local/browser preview and test files
 _chrometest/
+_chrome-v12/
 _preview/
 test-local.cjs
+test-v12.cjs
+fetch-media.py
+make-v10.py
+patch-v10.py
+build-v11.py
 *.log
 .env
 *.env
-
-# Local design scripts
-make-v10.py
-patch-v10.py

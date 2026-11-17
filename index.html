@@ -2,177 +2,124 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#090910">
-  <meta name="color-scheme" content="dark">
-  <meta name="speedstu-version" content="11.0 — Aether">
-  <meta name="description" content="Speedstu — Rocket League bots, Trackmania simulations and CUDA compatibility experiments on AMD hardware.">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#f3f2ef">
+  <meta name="description" content="Speedstu — Rocket League bots, Trackmania simulation, and AMD GPU experiments. Personal portfolio.">
+  <meta property="og:title" content="Speedstu — Personal projects">
+  <meta property="og:description" content="Rocket League, Trackmania, and experimental code.">
+  <meta property="og:image" content="https://speedstu.tech/assets/hero-rafale.webp">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="en_US">
-  <meta property="og:title" content="speedstu — projects">
-  <meta property="og:description" content="Rocket League bots. Trackmania. GPU experiments.">
-  <meta property="og:image" content="https://speedstu.tech/assets/hero-rafale.webp">
   <link rel="canonical" href="https://speedstu.tech/">
-  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
-  <link rel="preload" as="image" type="image/webp" href="assets/rafale-v1.webp">
-  <link rel="stylesheet" href="v11.css?v=11.0.0">
-  <script src="v11.js?v=11.0.0" defer></script>
-  <title>speedstu — projects</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preload" as="image" href="assets/rafale-v1.webp">
+  <link rel="stylesheet" href="v12.css?v=12.0.0">
+  <script src="v12.js?v=12.0.0" defer></script>
+  <title>Speedstu — Personal projects</title>
 </head>
 <body>
-  <a class="skip-link" href="#projects">Skip to projects</a>
-  <div class="scene" aria-hidden="true">
-    <canvas id="scene-gl"></canvas>
-    <div class="scene-ambient"></div>
-    <div class="scene-manga" id="scene-manga"><img src="assets/marin-kitagawa.webp" alt="" width="1920" height="1378" decoding="async" loading="lazy"></div>
-    <div class="scene-vignette"></div>
-    <img id="scene-aircraft" src="assets/rafale-v1.webp" alt="" width="1650" height="929" decoding="async">
-  </div>
-  <div class="cursor-light" id="cursor-light" aria-hidden="true"></div>
-  <div class="scroll-meter" aria-hidden="true"><span id="scroll-fill"></span></div>
-  <header class="site-header" id="site-header">
-    <a class="identity" href="#home" aria-label="Speedstu, back to the top">speedstu<span>.</span></a>
-    <nav class="desktop-navigation" aria-label="Main navigation">
-      <a href="#projects">Work</a>
-      <a href="#about">About</a>
-      <a href="#contact">GitHub</a>
+  <a class="skip-link" href="#work">Skip to projects</a>
+  <div class="read-progress" aria-hidden="true"><span></span></div>
+  <header class="nav" id="nav">
+    <a class="brand" href="#home" aria-label="Speedstu, home">speedstu<span>.</span></a>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="#work">work</a>
+      <a href="#about">about</a>
     </nav>
-    <div class="header-controls">
-      <button class="motion-toggle" id="motion-toggle" type="button" aria-label="Pause background motion" aria-pressed="false">
-        <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4.5 4v8m7-8v8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-        <span id="motion-label">Motion on</span>
-      </button>
-      <a class="github-shortcut" href="https://github.com/Speedstu" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">↗</a>
-      <button class="menu-button" id="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu" type="button"><span></span><span></span></button>
-    </div>
+    <a class="nav-github" href="https://github.com/Speedstu" target="_blank" rel="noopener noreferrer">github <span aria-hidden="true">↗</span></a>
+    <button id="menu-button" class="menu-button" type="button" aria-label="Open menu" aria-controls="mobile-menu" aria-expanded="false"><span></span><span></span></button>
   </header>
   <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile navigation" hidden>
-    <a href="#projects">Work <span>01</span></a>
-    <a href="#about">About <span>02</span></a>
-    <a href="#contact">GitHub <span>03</span></a>
+    <a href="#work">work</a><a href="#about">about</a><a href="#contact">github</a>
   </nav>
 
-  <main id="page">
-    <section class="hero" id="home" data-scene="hero">
-      <div class="hero-sticky">
-        <div class="hero-inner container">
-          <div class="hero-top"><span></span><span>Scroll to explore&nbsp; ↓</span></div>
-          <div class="hero-copy">
-
-            <h1>speed<br>type shit<span class="hero-stop">.</span></h1>
-            <div class="hero-actions">
-              <a class="round-link" href="#projects">Explore projects <span aria-hidden="true">↗</span></a>
-
-            </div>
-          </div>
-          <div class="hero-baseline"><span>Rocket League&nbsp; / &nbsp;Trackmania&nbsp; / &nbsp;GPU</span></div>
-        </div>
+  <main>
+    <section class="hero" id="home" aria-label="Introduction">
+      <div class="hero-gallery" aria-hidden="true">
+        <div class="hero-photo photo-track" data-depth="-1.1"><img src="assets/trackmania-real.webp" width="1920" height="1080" alt="" decoding="async" fetchpriority="low"></div>
+        <div class="hero-photo photo-rocket" data-depth=".8"><img src="assets/rocketleague-real.webp" width="1920" height="1080" alt="" decoding="async" fetchpriority="low"></div>
+        <div class="hero-photo photo-rafale" data-depth="1.25"><img src="assets/rafale-v1.webp" width="1650" height="929" alt="" decoding="async"></div>
+        <div class="hero-photo photo-gpu" data-depth="-.6"><img src="assets/radeon-rx9060xt.webp" width="1200" height="1000" alt="" decoding="async"></div>
+      </div>
+      <div class="hero-title-wrap">
+        <div class="hero-overline"><span>PERSONAL PORTFOLIO</span><span>2026</span></div>
+        <h1>speed type<br>shit<span class="dot">.</span></h1>
+        <div class="hero-bottomline"><span>Rocket League / Trackmania / GPU</span><a href="#work">Scroll to explore <span aria-hidden="true">↘</span></a></div>
       </div>
     </section>
 
-    <section class="projects" id="projects" data-scene="work">
-      <div class="container">
-        <div class="work-heading reveal">
-          <div><h2>Projects<span>.</span></h2></div>
-
-        </div>
-        <div class="feature-grid">
-          <article class="feature reveal" id="project-velocity" aria-labelledby="velocity-title">
-            <div class="feature-art arena-art" role="img" aria-label="Interactive illustrative Rocket League arena diagram">
-              <span class="art-index">01 / 03</span>
-              <svg class="arena-svg" viewBox="0 0 640 520" aria-hidden="true">
-              <defs><linearGradient id="arena-floor" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ffffff" stop-opacity=".09"/><stop offset="1" stop-color="#ffffff" stop-opacity=".008"/></linearGradient></defs>
-              <path d="M70 165 L345 88 L566 193 L300 410 Z" fill="url(#arena-floor)" stroke="#ffffff" stroke-opacity=".22" stroke-width="1.3"/>
-              <path d="M91 176 L344 105 L541 196 L300 388 Z" fill="none" stroke="white" stroke-opacity=".13"/>
-              <path d="M205 132 L418 339 M187 253 L469 148" stroke="white" stroke-opacity=".14"/>
-              <ellipse cx="320" cy="245" rx="57" ry="35" transform="rotate(23 320 245)" stroke="white" stroke-opacity=".28" fill="none"/>
-              <path d="M71 205 L118 191 L135 242 L89 256 M515 322 L474 291 L496 249 L548 285" fill="none" stroke="#ffffff" stroke-opacity=".38"/>
-              <path class="arena-trajectory" d="M177 315 Q245 210 320 243 T491 166" fill="none" stroke="white" stroke-opacity=".75" stroke-width="1.4" stroke-dasharray="4 7"/>
-              <circle class="arena-ball-glow" cx="320" cy="243" r="19" fill="#fff" fill-opacity=".075"/>
-              <circle class="arena-ball" cx="320" cy="243" r="7" fill="#ececeb"/>
-              <path d="M330 241 L382 220 M321 251 L299 277" stroke="white" stroke-opacity=".32"/>
-              <circle class="arena-player" cx="195" cy="292" r="5" fill="#9fabae"/>
-              <circle cx="474" cy="231" r="5" fill="#c1bdba"/>
-            </svg>
-              <span class="art-edge">Rocket League</span>
+    <section class="gallery-section" id="work" aria-labelledby="work-title">
+      <div class="gallery-stage">
+        <div class="gallery-heading"><span>SELECTED WORK</span><h2 id="work-title">Projects.</h2><div class="gallery-index"><span id="gallery-current">01</span><span>/ 03</span></div></div>
+        <div class="gallery-track" id="gallery-track">
+          <article class="project-slide slide-rocket" id="velocityrl" aria-labelledby="rocket-title">
+            <div class="slide-image">
+              <img src="assets/rocketleague-real.webp" width="1920" height="1080" alt="Rocket League gameplay showing an Octane car and the ball" decoding="async" loading="lazy">
             </div>
-            <div class="feature-copy">
-              <div class="feature-label"><span>Rocket League</span><span>Private</span></div>
-              <h3 id="velocity-title">VelocityRL</h3>
-              <p>Training bots with self-play, PPO, V-trace and different simulation backends.</p>
-              <div class="feature-tags"><span>RLGym</span><span>RocketSim</span><span>Python / C++</span></div>
-              <span class="feature-footer">Work in progress</span>
+            <div class="slide-shade"></div>
+            <div class="slide-copy">
+              <div class="project-no">01 <span>/</span> Rocket League</div>
+              <h3 id="rocket-title">VelocityRL</h3>
+              <p>Training bots with self-play, PPO, V-trace and RocketSim.</p>
+              <span class="project-state">Private project</span>
             </div>
           </article>
-          <article class="feature reveal" id="project-track" aria-labelledby="track-title">
-            <div class="feature-art track-art" role="img" aria-label="Interactive illustrative Trackmania racing trajectory">
-              <span class="art-index">02 / 03</span>
-              <svg viewBox="0 0 640 520" aria-hidden="true" class="track-svg">
-              <defs><linearGradient id="path-glow" x1="0" x2="1"><stop stop-color="#ffffff" stop-opacity=".13"/><stop offset=".7" stop-color="#ffffff" stop-opacity=".75"/><stop offset="1" stop-color="#ffffff" stop-opacity=".4"/></linearGradient></defs>
-              <path d="M102 432 C101 378 160 361 209 329 C277 286 240 232 208 179 C177 122 270 84 347 107 C430 135 408 213 473 231 C554 254 557 345 496 369 C418 401 388 345 339 370 C292 394 247 462 190 434" fill="none" stroke="#ffffff" stroke-opacity=".08" stroke-width="50"/>
-              <path d="M102 432 C101 378 160 361 209 329 C277 286 240 232 208 179 C177 122 270 84 347 107 C430 135 408 213 473 231 C554 254 557 345 496 369 C418 401 388 345 339 370 C292 394 247 462 190 434" fill="none" stroke="#ffffff" stroke-opacity=".19" stroke-width="38"/>
-              <path d="M102 432 C101 378 160 361 209 329 C277 286 240 232 208 179 C177 122 270 84 347 107 C430 135 408 213 473 231 C554 254 557 345 496 369 C418 401 388 345 339 370 C292 394 247 462 190 434" fill="none" stroke="#ffffff" stroke-opacity=".25" stroke-dasharray="3 9" stroke-width="1.2"/>
-              <path id="track-path" d="M102 432 C101 378 160 361 209 329 C277 286 240 232 208 179 C177 122 270 84 347 107 C430 135 408 213 473 231 C554 254 557 345 496 369 C418 401 388 345 339 370 C292 394 247 462 190 434" fill="none" stroke="url(#path-glow)" stroke-width="2.5"/>
-              <circle class="track-runner-glow" cx="102" cy="432" r="16" fill="white" fill-opacity=".09"/>
-              <circle class="track-runner" cx="102" cy="432" r="5" fill="#f6f6f3"/>
-            </svg>
-              <span class="art-edge">Trackmania</span>
+          <article class="project-slide slide-track" id="tm2020" aria-labelledby="track-title">
+            <div class="slide-image">
+              <img src="assets/trackmania-real.webp" width="1920" height="1080" alt="Trackmania 2020 gameplay with cars driving around a loop" decoding="async" loading="lazy">
             </div>
-            <div class="feature-copy">
-              <div class="feature-label"><span>Simulation</span><span>Public</span></div>
+            <div class="slide-shade"></div>
+            <div class="slide-copy">
+              <div class="project-no">02 <span>/</span> Trackmania</div>
               <h3 id="track-title">TM2020-Sim</h3>
-              <p>Testing controllers, racing lines and game physics without launching the game.</p>
-              <div class="feature-tags"><span>C++ / Rust</span><span>Gearbox</span></div>
-              <a class="feature-link" href="https://github.com/Speedstu/TM2020-Sim-V1" target="_blank" rel="noopener noreferrer">View repository <span aria-hidden="true">↗</span></a>
+              <p>A simulation for testing driving agents, trajectories and physics.</p>
+              <a class="project-action" href="https://github.com/Speedstu/TM2020-Sim-V1" target="_blank" rel="noopener noreferrer">View on GitHub <span aria-hidden="true">↗</span></a>
             </div>
           </article>
-          <article class="feature reveal" id="project-cuda" aria-labelledby="cuda-title">
-            <div class="feature-art compute-art" role="img" aria-label="Interactive abstract GPU compute grid">
-              <span class="art-index">03 / 03</span>
-              <div class="compute-matrix" id="compute-matrix" aria-hidden="true"></div>
-              <span class="art-edge">AMD / Windows</span>
+          <article class="project-slide slide-gpu" id="gpu" aria-labelledby="gpu-title">
+            <div class="slide-image">
+              <img src="assets/radeon-rx9060xt.webp" width="1200" height="1000" alt="Photograph of an AMD Radeon RX 9060 XT graphics card" decoding="async" loading="lazy">
             </div>
-            <div class="feature-copy">
-              <div class="feature-label"><span>GPU tools</span><span>Public</span></div>
-              <h3 id="cuda-title">CUDA on AMD</h3>
-              <p>Making CUDA workloads run on AMD GPUs under Windows using ZLUDA and HIP.</p>
-              <div class="feature-tags"><span>ZLUDA</span><span>HIP</span><span>Windows</span></div>
-              <a class="feature-link" href="https://github.com/Speedstu/CUDA-for-AMD-Windows" target="_blank" rel="noopener noreferrer">View repository <span aria-hidden="true">↗</span></a>
+            <div class="slide-shade"></div>
+            <div class="slide-copy">
+              <div class="project-no">03 <span>/</span> AMD / Windows</div>
+              <h3 id="gpu-title">CUDA on AMD</h3>
+              <p>Experiments with CUDA workloads on AMD GPUs using ZLUDA and HIP.</p>
+              <a class="project-action" href="https://github.com/Speedstu/CUDA-for-AMD-Windows" target="_blank" rel="noopener noreferrer">View on GitHub <span aria-hidden="true">↗</span></a>
             </div>
           </article>
         </div>
+        <div class="gallery-rail" aria-hidden="true"><span id="gallery-rail"></span></div>
       </div>
     </section>
 
-    <section class="more" id="more" data-scene="work">
-      <div class="container">
-        <div class="more-heading reveal"><h2>More.</h2><a href="https://github.com/Speedstu?tab=repositories" target="_blank" rel="noopener noreferrer">All repositories ↗</a></div>
-        <div class="repo-list">
-          <a class="repo-item reveal" href="https://github.com/Speedstu/RocketLearnNative" target="_blank" rel="noopener noreferrer"><strong>RocketLearnNative</strong><span>RL training in C++ / Rust</span><span aria-hidden="true">↗</span></a>
-          <a class="repo-item reveal" href="https://github.com/Speedstu/EvilRLBot" target="_blank" rel="noopener noreferrer"><strong>EvilRLBot</strong><span>RLBot launcher and utilities</span><span aria-hidden="true">↗</span></a>
-          <a class="repo-item reveal" href="https://github.com/Speedstu/infinite-airdribble-rocket-league-bot" target="_blank" rel="noopener noreferrer"><strong>Infinite Airdribble</strong><span>Rocket League aerial-control bot</span><span aria-hidden="true">↗</span></a>
+    <section class="other" id="other" aria-labelledby="other-title">
+      <div class="other-header"><h2 id="other-title">More work.</h2><a href="https://github.com/Speedstu?tab=repositories" target="_blank" rel="noopener noreferrer">All repositories <span aria-hidden="true">↗</span></a></div>
+      <div class="repo-list">
+        <a href="https://github.com/Speedstu/RocketLearnNative" target="_blank" rel="noopener noreferrer"><strong>RocketLearnNative</strong><span>Rocket League training in C++ / Rust</span><b aria-hidden="true">↗</b></a>
+        <a href="https://github.com/Speedstu/EvilRLBot" target="_blank" rel="noopener noreferrer"><strong>EvilRLBot</strong><span>RLBot launcher and utilities</span><b aria-hidden="true">↗</b></a>
+        <a href="https://github.com/Speedstu/infinite-airdribble-rocket-league-bot" target="_blank" rel="noopener noreferrer"><strong>Infinite Airdribble</strong><span>Rocket League aerial-control bot</span><b aria-hidden="true">↗</b></a>
+      </div>
+    </section>
+
+    <section class="marin" id="marin" role="img" aria-label="Full-screen black-and-white manga illustration of Marin Kitagawa">
+      <div class="marin-image"><img src="assets/marin-kitagawa.webp" width="1920" height="1378" alt="" loading="lazy" decoding="async"></div>
+    </section>
+
+    <section class="about" id="about">
+      <div class="about-inner"><h2>About.</h2>
+        <div class="about-links">
+          <a href="https://music.youtube.com/@luvmewhileyukan" target="_blank" rel="noopener noreferrer">music.youtube.com/@luvmewhileyukan <span aria-hidden="true">↗</span></a>
+          <a href="https://music.youtube.com/watch?v=a2WSQEEEThc" target="_blank" rel="noopener noreferrer">music.youtube.com/watch?v=a2WSQEEEThc <span aria-hidden="true">↗</span></a>
         </div>
       </div>
     </section>
 
-    <section class="marin-section" id="marin" data-scene="manga" role="img" aria-label="Full-screen black and white manga illustration of Marin Kitagawa"></section>
-
-    <section class="intro" id="about" data-scene="about">
-      <div class="container about-grid">
-        <h2>About.</h2>
-        <div class="music-links">
-          <a href="https://music.youtube.com/@luvmewhileyukan" target="_blank" rel="noopener noreferrer"><span>music.youtube.com/@luvmewhileyukan</span><span aria-hidden="true">↗</span></a>
-          <a href="https://music.youtube.com/watch?v=a2WSQEEEThc" target="_blank" rel="noopener noreferrer"><span>music.youtube.com/watch?v=a2WSQEEEThc</span><span aria-hidden="true">↗</span></a>
-        </div>
-      </div>
-    </section>
-
-    <section class="contact" id="contact" data-scene="end">
-      <div class="container contact-inner">
-
+    <section class="contact" id="contact">
+      <div class="contact-inner">
         <h2>my github<span>.</span></h2>
-        <a class="contact-link" href="https://github.com/Speedstu" target="_blank" rel="noopener noreferrer"><span>github.com/Speedstu</span><span aria-hidden="true">↗</span></a>
-        <footer><span>speedstu.</span><a href="#home">Back to top ↑</a></footer>
+        <a class="contact-link" href="https://github.com/Speedstu" target="_blank" rel="noopener noreferrer">github.com/Speedstu <span aria-hidden="true">↗</span></a>
+        <footer><span>speedstu :)</span><a href="#home">Back to top ↑</a></footer>
       </div>
     </section>
   </main>
