@@ -117,5 +117,5 @@
       });
     });
   }
-  $('#year').textContent=new Date().getFullYear();
+  if($('#year')) $('#year').textContent=new Date().getFullYear();
 })();
