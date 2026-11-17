@@ -11,3 +11,8 @@ build-v11.py
 *.log
 .env
 *.env
+_chrome-classic/
+test-v13.cjs
+patch-v13.py
+patch-performance.py
+restore-pre-marin.py

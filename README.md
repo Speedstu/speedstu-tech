@@ -1,46 +1,41 @@
 # speedstu.tech
 
-Personal portfolio for my Rocket League bots, Trackmania simulation and CUDA-on-AMD experiments.
+A personal portfolio for Rocket League bots, Trackmania simulation, and CUDA compatibility experiments on AMD GPUs.
 
-## V12 — Index
+## V13 — Flight Study
 
-A completely revised editorial site, inspired by strong work on [Awwwards](https://www.awwwards.com/), particularly the photography-first, minimal approach found in work by Gionatan Nese and Prødux. **No templates or proprietary site assets were copied.** The code is original.
+This edition restores the **last approved design before Marin** (commit `54aab32`) and carefully builds on top of it.
 
-### Interface
+### Interactions
+- The original V1 Rafale flight: **exact keyframes**, left-to-right pass, approach to camera, contrails and heading behind the plane. The aircraft choreography in `script.js` is unchanged.
+- Custom depth-field renderer: a scroll-controlled 3D-perspective tunnel behind the Rafale, with pointer-responsive vanishing point and restrained illumination. Implemented locally in Canvas 2D, no remote 3D assets or stock scenes.
+- Interactive color aperture on each project's real photo: the rest of the image stays monochrome. The color lens only runs on fine-pointer devices and is disabled for reduced motion.
+- Full-width, alternating editorial project chapters (not rounded cards).
+- The original `speed type shit` hero text, all-English content and the two owner-selected YouTube Music links.
+- No Marin interlude and no fake portfolio slogans.
+- Reduced-motion support, mobile graphics at lower detail, a maximum 30fps for the desktop flight effect, keyboard navigation and meaningful image alt text.
+- Static GitHub Pages site with **no external JavaScript libraries, no ads, no analytics and no API tokens in the code**.
 
-- Warm monochrome typography-led homepage with a mouse-responsive collage.
-- Real Rocket League and Trackmania screenshots, and the existing Radeon/Rafale visuals — no AI-generated project artwork.
-- Full-width photographic work, horizontally driven by ordinary vertical scrolling on desktop. The same sections are vertically stacked on mobile.
-- Sharp type and restrained navigation, subtle parallax, responsive interactions, keyboard-accessible links.
-- Full-screen owner-provided Marin illustration without any overlaid text.
-- About contains only the owner's two YouTube Music links.
-- The site is English-only. Reduced-motion users see a conventional vertical project list.
-- Static HTML/CSS/JS, no remote JavaScript dependencies, cookies, analytics or forms.
+### Files
+- `index.html` — content and project information.
+- `styles.css` / `personal.css` / `script.js` — retained pre-Marin base.
+- `v13.css` — V13 visual refinements.
+- `v13.js` — depth field, responsive pointer interactions and optical image reveal.
+- `assets/hero-rafale.webp` / `assets/rafale-v1.webp` — hero and flight artwork.
+- `assets/rocketleague-real.webp` / `assets/trackmania-real.webp` — illustrative gameplay screenshots.
+- `assets/radeon-rx9060xt.webp` — Radeon photograph.
 
-### Contents
+### Media notes
+The game images illustrate the actual games, not the user's bot runs. The Rocket League image comes from a game press screenshot and the Trackmania image from a game gallery. The Radeon image is by [Padgriffin](https://commons.wikimedia.org/wiki/File:AMD_Radeon_RX9060XT.png), shared under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
 
-- `index.html` — markup, project links, accessibility
-- `v12.css` — visual design and responsive layouts
-- `v12.js` — scroll-linked gallery, theme changes, hover/mouse responses
-- `assets/rocketleague-real.webp` — screenshot used as an illustrative image for Rocket League
-- `assets/trackmania-real.webp` — screenshot used as an illustrative image for Trackmania 2020
-- `assets/radeon-rx9060xt.webp` — existing Radeon card photograph
-- `assets/rafale-v1.webp` — original Rafale art from V1
-- `assets/marin-kitagawa.webp` — owner-supplied manga illustration
+### Spline
+A published Spline scene can be embedded after its owner exports a Spline Viewer URL, but V13 deliberately avoids inserting a generic third-party Spline scene. The original perspective field is lighter and keeps the restored Rafale interaction intact. Refer to the [Spline Viewer documentation](https://docs.spline.design/exporting-your-scene/web/exporting-as-spline-viewer) for a future authored scene.
 
-### Visual sources and attribution
-
-These are illustrative photographs/screenshots of the underlying games and products, **not footage of the user's bots or simulations**.
-
-- Rocket League screenshot: [GamesRadar+ review](https://www.gamesradar.com/rocket-league-review/) (game © Psyonix/Epic Games; screenshot hosted by GamesRadar+).
-- Trackmania 2020 screenshot: [GameGrin game gallery](https://www.gamegrin.com/directory/game/trackmania-2020/images) (game © Ubisoft/Nadeo; screenshot hosted by GameGrin).
-- GPU photograph: [Padgriffin / Wikimedia Commons](https://commons.wikimedia.org/wiki/File:AMD_Radeon_RX9060XT.png), [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/), modified for sizing/monochrome treatment.
-- Marin image was supplied by the owner. The characters, marks and associated media belong to their respective rightsholders.
-
-### Preview
-
-Run `python -m http.server 8000` from this repository, then open `http://localhost:8000`.
+### Local preview
+```sh
+python -m http.server 8000
+```
+Then visit `http://localhost:8000`.
 
 ### Deployment
-
-GitHub Pages deploys the `main` branch to `speedstu.tech`. DNS management is separate. **Do not add credentials or API keys.** Previous versions are available in Git history.
+The `main` branch is published by GitHub Pages to `speedstu.tech`. DNS is separate. Keep all credentials out of this repository. Previous designs remain available via Git history.
