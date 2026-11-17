@@ -353,3 +353,7 @@ html.has-js-motion [data-reveal="photo"].is-visible {clip-path:inset(0 0 0 0 rou
 @media(prefers-reduced-motion:reduce) {
   .flight-v1 .flight-heading {opacity:.85!important;transform:none!important;}
 }
+
+/* V7.7: Rafale goes straight into the actual projects section. */
+.flight-section.flight-v1 {height:225svh;}
+@media(max-width:600px) { .flight-section.flight-v1 {height:210svh;} }
