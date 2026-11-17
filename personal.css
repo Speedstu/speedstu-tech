@@ -296,71 +296,60 @@ html.has-js-motion [data-reveal="photo"].is-visible {clip-path:inset(0 0 0 0 rou
 .hero-bottomline {justify-content:flex-end;}
 .work-heading-grid {display:block;}
 .work-heading h2 {max-width:100%;}
-/* Keep the Rafale crossing left-to-right. Only repair the typography behind it. */
+/* The title stays BEHIND the aircraft, including while it crosses the centre.
+   No outlines, letter stacking, extreme tracking or overlapping lines. */
 .flight-v1 .flight-heading {
   position:absolute;
   inset:0;
-  display:flex;
-  align-items:flex-start;
-  justify-content:center;
-  flex-direction:column;
-  gap:clamp(2px,1.1vh,12px);
-  padding:0 max(32px,calc((100vw - 1240px)/2));
+  z-index:1;
+  display:grid;
+  place-items:center;
+  padding:0 36px;
   max-width:100%;
-  color:#eef0ef;
-  text-align:left;
+  color:#f4f4f2;
+  text-align:center;
+  font-family:system-ui,-apple-system,"Segoe UI",Arial,sans-serif;
+  font-size:clamp(54px,8.1vw,112px);
+  font-weight:700;
+  letter-spacing:-.025em;
+  line-height:1.12;
+  text-transform:none;
   white-space:normal;
-  line-height:1.03;
-  font-size:clamp(52px,8.25vw,116px);
-  font-weight:650;
-  letter-spacing:-.065em;
-  transform:translateY(calc(var(--heading-shift,0)* .42px));
   opacity:var(--heading-opacity,0);
+  transform:translateY(calc(var(--heading-shift,0)* .12px));
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
   pointer-events:none;
 }
-.flight-v1 .flight-heading span {
+.flight-v1 .flight-heading span,
+.flight-v1 .flight-heading span:first-child,
+.flight-v1 .flight-heading span:nth-child(2) {
   display:block;
   max-width:100%;
+  color:inherit;
+  font:inherit;
+  letter-spacing:inherit;
+  line-height:inherit;
+  white-space:normal;
   overflow-wrap:normal;
-  white-space:nowrap;
   -webkit-text-stroke:0;
-}
-.flight-v1 .flight-heading span:first-child {color:rgba(242,244,243,.54);}
-.flight-v1 .flight-heading span:nth-child(2) {
-  font-size:1em;
-  color:#f4f5f4;
-  -webkit-text-stroke:0;
-  letter-spacing:-.065em;
-  font-weight:680;
+  text-shadow:none;
 }
 .flight-v1 .flight-caption,.flight-v1 .flight-ticks {display:none!important;}
 .flight-v1 .flight-wipe {align-items:flex-start;}
-.flight-v1 .wipe-title {font-size:clamp(52px,8.8vw,126px);letter-spacing:-.06em;white-space:normal;line-height:1.07;}
-@media(max-width:900px){
-  .flight-v1 .flight-heading {padding:0 28px;font-size:clamp(48px,8.4vw,82px);}
+.flight-v1 .wipe-title {
+  font-size:clamp(52px,8.8vw,126px);
+  letter-spacing:-.035em;
+  line-height:1.1;
+  white-space:normal;
 }
-@media(max-width:600px){
-  .flight-v1 .flight-heading {padding:0 22px;font-size:clamp(39px,9.4vw,58px);gap:8px;letter-spacing:-.05em;}
-  .flight-v1 .flight-heading span:nth-child(2) {letter-spacing:-.05em;}
+@media(max-width:900px) {
+  .flight-v1 .flight-heading {font-size:clamp(44px,8.2vw,76px);padding:0 24px;}
+}
+@media(max-width:600px) {
+  .flight-v1 .flight-heading {font-size:clamp(33px,9.7vw,56px);padding:0 17px;letter-spacing:-.018em;}
   .flight-v1 .wipe-title {font-size:clamp(42px,10vw,68px);}
 }
-@media(max-width:360px){
-  .flight-v1 .flight-heading {padding:0 19px;font-size:clamp(36px,9.2vw,45px);}
-}
-@media(prefers-reduced-motion:reduce){
-  .flight-v1 .flight-heading {transform:none!important;opacity:.9!important;}
-}
-
-/* The short title fades out before the aircraft crosses the centre. */
-.flight-v1 .flight-heading {
-  align-items:center;
-  text-align:center;
-  padding:0 28px;
-  font-size:clamp(48px,7.1vw,104px);
-  letter-spacing:-.06em;
-  transform:translateY(calc(var(--heading-shift,0)* .22px));
-}
-.flight-v1 .flight-heading span:first-child {color:#f4f5f4;}
-@media(max-width:600px){
-  .flight-v1 .flight-heading {font-size:clamp(36px,9.4vw,60px);padding:0 16px;}
+@media(prefers-reduced-motion:reduce) {
+  .flight-v1 .flight-heading {opacity:.85!important;transform:none!important;}
 }
