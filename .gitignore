@@ -1,18 +1,23 @@
-# Local/browser preview and test files
-_chrometest/
-_chrome-v12/
+# Local browser tests and temporary design work
 _preview/
+_chrome*/
+_chrometest/
+test-*.cjs
 test-local.cjs
-test-v12.cjs
+*.log
+*.tmp
+
+# Local scripts from previous design revisions
+build-v11.py
 fetch-media.py
 make-v10.py
-patch-v10.py
-build-v11.py
-*.log
-.env
-*.env
-_chrome-classic/
-test-v13.cjs
-patch-v13.py
 patch-performance.py
+patch-v10.py
+patch-v13.py
 restore-pre-marin.py
+
+# Credentials and machine-specific config
+.env
+.env.*
+*.token
+credentials.json
