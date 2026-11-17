@@ -290,3 +290,77 @@ html.has-js-motion [data-reveal="photo"].is-visible {clip-path:inset(0 0 0 0 rou
   .music-link {padding:25px 0;gap:12px;font-size:clamp(15px,4.3vw,21px);letter-spacing:-.03em;}
   .music-link-arrow {font-size:24px;}
 }
+/* V7.5 – remove decorative section rules and keep section labels understated. */
+.section-kicker {display:block;gap:0;font-size:13px;font-weight:500;letter-spacing:0;line-height:1.5;color:#7a7b79;}
+.section-kicker::before,.section-kicker::after,.section-kicker .red-stroke {content:none!important;display:none!important;}
+.hero-bottomline {justify-content:flex-end;}
+.work-heading-grid {display:block;}
+.work-heading h2 {max-width:100%;}
+/* Keep the Rafale crossing left-to-right. Only repair the typography behind it. */
+.flight-v1 .flight-heading {
+  position:absolute;
+  inset:0;
+  display:flex;
+  align-items:flex-start;
+  justify-content:center;
+  flex-direction:column;
+  gap:clamp(2px,1.1vh,12px);
+  padding:0 max(32px,calc((100vw - 1240px)/2));
+  max-width:100%;
+  color:#eef0ef;
+  text-align:left;
+  white-space:normal;
+  line-height:1.03;
+  font-size:clamp(52px,8.25vw,116px);
+  font-weight:650;
+  letter-spacing:-.065em;
+  transform:translateY(calc(var(--heading-shift,0)* .42px));
+  opacity:var(--heading-opacity,0);
+  pointer-events:none;
+}
+.flight-v1 .flight-heading span {
+  display:block;
+  max-width:100%;
+  overflow-wrap:normal;
+  white-space:nowrap;
+  -webkit-text-stroke:0;
+}
+.flight-v1 .flight-heading span:first-child {color:rgba(242,244,243,.54);}
+.flight-v1 .flight-heading span:nth-child(2) {
+  font-size:1em;
+  color:#f4f5f4;
+  -webkit-text-stroke:0;
+  letter-spacing:-.065em;
+  font-weight:680;
+}
+.flight-v1 .flight-caption,.flight-v1 .flight-ticks {display:none!important;}
+.flight-v1 .flight-wipe {align-items:flex-start;}
+.flight-v1 .wipe-title {font-size:clamp(52px,8.8vw,126px);letter-spacing:-.06em;white-space:normal;line-height:1.07;}
+@media(max-width:900px){
+  .flight-v1 .flight-heading {padding:0 28px;font-size:clamp(48px,8.4vw,82px);}
+}
+@media(max-width:600px){
+  .flight-v1 .flight-heading {padding:0 22px;font-size:clamp(39px,9.4vw,58px);gap:8px;letter-spacing:-.05em;}
+  .flight-v1 .flight-heading span:nth-child(2) {letter-spacing:-.05em;}
+  .flight-v1 .wipe-title {font-size:clamp(42px,10vw,68px);}
+}
+@media(max-width:360px){
+  .flight-v1 .flight-heading {padding:0 19px;font-size:clamp(36px,9.2vw,45px);}
+}
+@media(prefers-reduced-motion:reduce){
+  .flight-v1 .flight-heading {transform:none!important;opacity:.9!important;}
+}
+
+/* The short title fades out before the aircraft crosses the centre. */
+.flight-v1 .flight-heading {
+  align-items:center;
+  text-align:center;
+  padding:0 28px;
+  font-size:clamp(48px,7.1vw,104px);
+  letter-spacing:-.06em;
+  transform:translateY(calc(var(--heading-shift,0)* .22px));
+}
+.flight-v1 .flight-heading span:first-child {color:#f4f5f4;}
+@media(max-width:600px){
+  .flight-v1 .flight-heading {font-size:clamp(36px,9.4vw,60px);padding:0 16px;}
+}

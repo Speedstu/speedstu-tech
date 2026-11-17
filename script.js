@@ -40,7 +40,7 @@
     const p=clamp(-r.top/Math.max(1,flight.offsetHeight-innerHeight));
     const k=poseAt(p);
     jet.style.transform=`translate(calc(-50% + ${k.x.toFixed(2)}vw),calc(-50% + ${k.y.toFixed(2)}vh)) rotate(${k.a.toFixed(2)}deg) scale(${k.s.toFixed(3)})`;
-    const textOpacity=smooth((p-.12)/.17)*(1-smooth((p-.61)/.19));
+    const textOpacity=smooth((p-.05)/.11)*(1-smooth((p-.22)/.13));
     const trailOpacity=smooth((p-.12)/.24)*(1-smooth((p-.71)/.22));
     const wipe=smooth((p-.77)/.22);
     stage.style.setProperty('--fp',p.toFixed(3));
