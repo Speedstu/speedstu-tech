@@ -233,3 +233,29 @@ html.has-js-motion [data-reveal="photo"].is-visible {clip-path:inset(0 0 0 0 rou
 .photo-credit[href]:hover {background:rgba(15,17,17,.87);text-decoration:underline;}
 /* Use a consistent photograph background, not a letterboxed vendor image. */
 .scene-gpu .external-photo {object-fit:cover;background:#e8e9e7;}
+
+/* V7.1: a single personal line in place of the old opening copy. */
+.hero .hero-slang-content {
+  top:50%;bottom:auto;
+  transform:translateY(-35%);
+  width:min(1000px,calc(100% - 100px));
+}
+.hero h1.hero-slang {
+  max-width:970px;
+  margin:0 0 40px;
+  font-size:clamp(80px,10.5vw,168px);
+  line-height:.91;
+  letter-spacing:-.093em;
+  font-weight:745;
+  text-transform:none;
+  text-wrap:balance;
+}
+@media(max-width:900px){
+  .hero .hero-slang-content {left:25px;right:25px;width:auto;top:52%;}
+  .hero h1.hero-slang {font-size:clamp(66px,11.6vw,120px);max-width:760px;}
+}
+@media(max-width:600px){
+  .hero .hero-slang-content {left:22px;right:22px;top:49%;transform:translateY(-28%);}
+  .hero h1.hero-slang {font-size:clamp(65px,14vw,92px);line-height:.96;letter-spacing:-.081em;margin-bottom:32px;}
+}
+@media(max-width:380px){.hero h1.hero-slang{font-size:clamp(56px,15vw,72px);}}
