@@ -259,3 +259,34 @@ html.has-js-motion [data-reveal="photo"].is-visible {clip-path:inset(0 0 0 0 rou
   .hero h1.hero-slang {font-size:clamp(65px,14vw,92px);line-height:.96;letter-spacing:-.081em;margin-bottom:32px;}
 }
 @media(max-width:380px){.hero h1.hero-slang{font-size:clamp(56px,15vw,72px);}}
+
+/* V7.2 — links in the About section, replacing the introduction. */
+.intro-layout.intro-music {
+  display:flex;
+  flex-direction:column;
+  gap:0;
+  padding:38px 0 88px;
+}
+.music-link {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+  padding:31px 2px;
+  border-bottom:1px solid #d6d8d5;
+  font-size:clamp(18px,2.35vw,33px);
+  font-weight:540;
+  line-height:1.3;
+  letter-spacing:-.045em;
+  transition:padding .38s var(--ease),color .25s ease,background .25s ease;
+}
+.music-link:first-child {border-top:1px solid #d6d8d5;}
+.music-link>span:first-child {min-width:0;overflow-wrap:anywhere;}
+.music-link-arrow {font-size:clamp(24px,2.3vw,35px);font-weight:400;flex:none;transition:transform .4s var(--ease);}
+.music-link:hover {padding-left:14px;background:#ededeb;color:#111;}
+.music-link:hover .music-link-arrow {transform:translate(5px,-4px);}
+@media(max-width:600px){
+  .intro-layout.intro-music {padding:28px 0 58px;}
+  .music-link {padding:25px 0;gap:12px;font-size:clamp(15px,4.3vw,21px);letter-spacing:-.03em;}
+  .music-link-arrow {font-size:24px;}
+}
