@@ -1,28 +1,23 @@
-# Speedstu V6.1 — portfolio personnel
+# Speedstu.tech
 
-Conserve la direction visuelle V6, avec la transition **Rafale originale de la V1** (même avion, mêmes points clés, de gauche vers la droite, grande révélation finale). Les textes sont ceux d’un portfolio personnel, pas d’une entreprise.
+My personal portfolio for Rocket League bots, Trackmania simulations, and AMD GPU projects.
 
-## Tester localement
+## Featured work
+- **VelocityRL** — private Rocket League training environment.
+- **TM2020-Sim** — Trackmania simulation and C++/Rust tooling.
+- **CUDA for AMD on Windows** — experiments with CUDA compatibility on AMD GPUs.
+- Other projects link to public GitHub repositories.
 
-Ouvrir `index.html` ou démarrer `python -m http.server 8000` dans ce dossier, puis ouvrir http://localhost:8000.
+## Run locally
+Open `index.html` or run `python3 -m http.server 8000` and browse to http://localhost:8000.
 
-## Publier
+## Design
+- English-only content, including navigation, descriptions, accessibility text, and the 404 page.
+- Rafale scroll transition retains the original V1 aircraft and left-to-right trajectory.
+- Scroll animations support `prefers-reduced-motion`.
+- Static site with no external JavaScript dependencies.
 
-Déployer **tous les fichiers à la racine** dans Cloudflare Pages ou autre hébergement statique. Ne pas fusionner avec une ancienne archive. Les nouvelles URLs styles.css?v=6.1.0 et script.js?v=6.1.0 limitent les problèmes de cache.
+## Image credits
+The Radeon RX 9060 XT photograph is by [Padgriffin](https://commons.wikimedia.org/wiki/User:Padgriffin), used under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/), resized and converted to WebP; [original image](https://commons.wikimedia.org/wiki/File:AMD_Radeon_RX9060XT.png). Rocket League and Trackmania pictures illustrate their respective games, not the actual bots.
 
-## À noter
-
-- Les visuels du jeu et de la carte graphique dans les sections projets restent les illustrations externes de la V6, avec images de secours si elles ne chargent pas.
-- VelocityRL est un dépôt GitHub privé : aucun faux lien public.
-- `assets/rafale-v1.webp` est **la ressource exacte de la V1** pour la transition. L’avion d’accueil est celui de la V6.
-- Les animations respectent « Réduire les animations ».
-
-
-## V7 — Site personnel
-
-- Les descriptions sont directement liées aux projets, sans slogans publicitaires.
-- Les apparitions au défilement, le léger parallaxe des visuels et la progression de lecture respectent `prefers-reduced-motion`.
-- La séquence Rafale au scroll de la V1 est préservée.
-- Photo Radeon RX 9060 XT : [Padgriffin](https://commons.wikimedia.org/wiki/User:Padgriffin), [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/), [fichier original](https://commons.wikimedia.org/wiki/File:AMD_Radeon_RX9060XT.png). Redimensionnée et convertie en WebP.
-- Les images Rocket League et Trackmania sont des illustrations de jeu, et non des captures des bots.
-- Aucun identifiant Name.com ou GitHub n’est stocké dans les fichiers publiés.
+Do not commit credentials or deployment API tokens.
