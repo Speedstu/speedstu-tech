@@ -5,3 +5,7 @@ test-local.cjs
 *.log
 .env
 *.env
+
+# Local design scripts
+make-v10.py
+patch-v10.py
