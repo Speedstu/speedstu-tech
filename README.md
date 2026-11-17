@@ -16,3 +16,13 @@ Déployer **tous les fichiers à la racine** dans Cloudflare Pages ou autre héb
 - VelocityRL est un dépôt GitHub privé : aucun faux lien public.
 - `assets/rafale-v1.webp` est **la ressource exacte de la V1** pour la transition. L’avion d’accueil est celui de la V6.
 - Les animations respectent « Réduire les animations ».
+
+
+## V7 — Site personnel
+
+- Les descriptions sont directement liées aux projets, sans slogans publicitaires.
+- Les apparitions au défilement, le léger parallaxe des visuels et la progression de lecture respectent `prefers-reduced-motion`.
+- La séquence Rafale au scroll de la V1 est préservée.
+- Photo Radeon RX 9060 XT : [Padgriffin](https://commons.wikimedia.org/wiki/User:Padgriffin), [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/), [fichier original](https://commons.wikimedia.org/wiki/File:AMD_Radeon_RX9060XT.png). Redimensionnée et convertie en WebP.
+- Les images Rocket League et Trackmania sont des illustrations de jeu, et non des captures des bots.
+- Aucun identifiant Name.com ou GitHub n’est stocké dans les fichiers publiés.
