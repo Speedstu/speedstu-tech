@@ -1,0 +1,7 @@
+# Local-only browser checks and temporary artifacts
+_chrometest/
+_preview/
+test-local.cjs
+*.log
+.env
+*.env
