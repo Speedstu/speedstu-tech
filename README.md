@@ -1,48 +1,17 @@
 # speedstu.tech
 
-Personal portfolio: Rocket League bots, Trackmania simulation, and CUDA experiments on AMD hardware.
+Personal portfolio for Rocket League bots, Trackmania simulation, and CUDA experiments on AMD hardware.
 
-## Current design
+The cover has a pointer- and scroll-responsive camera. Flight mode brings the aircraft closer and opens a viewfinder. The short scroll transition uses the original Rafale cutout and seven poses from V1 and V14. The project gallery links to public repositories, and the lab documents simulation, reinforcement learning, and GPU experiments.
 
-The live site is deliberately small and bespoke. It is not a purchased portfolio template and it does not use AI-generated portfolio artwork.
-
-It borrows **design principles**, not source code, from personal sites by designers such as [Rauno Fäderholm](https://rauno.me/) and [Paco Coursey](https://paco.me/), plus recurring design feedback on [r/webdesign](https://www.reddit.com/r/webdesign/). The emphasis is on typography, alignment, honest content and one distinctive interaction.
-
-- Dark, photo-led cover with the original **speed type shit** copy.
-- The exact V1 Rafale scroll path (seven keyframes), contrails, heading behind the aircraft and a white wipe into the project index.
-- One editorial work index with a single sticky, context-sensitive preview instead of cards, chips, or numbered steps.
-- No Marin section. No fabricated personal biography or corporate slogans.
-- Real game screenshots and a GPU photo, plus the original Rafale artwork.
-- The owner's two YouTube Music links, GitHub repositories, and **my github** footer.
-- Mobile displays the same project images inline.
-- Supports reduced motion, keyboard navigation, alt text and no-JavaScript fallback.
-- Fully static. No external scripts, telemetry, forms, tracking, CDN dependency or private tokens.
-
-## Files
-
-- `index.html` — page content and accessible navigation.
-- `index-v14.css` — one standalone stylesheet.
-- `index-v14.js` — native scroll flight and image selection; animation only runs when scrolling.
-- `assets/` — local photos and Rafale artwork.
-- `404.html`, `_headers`, `CNAME`, `robots.txt`, `sitemap.xml` — Pages deployment and site metadata.
-
-Old iterations are accessible in **Git history**. Production no longer carries their separate CSS/JS files.
-
-## Media notes
-
-Gameplay imagery is illustrative of the original games, not recordings of the user's bots.
-
-- Rocket League screenshot: public game screenshot originally from TechSpot; Rocket League © Psyonix / Epic Games.
-- Trackmania 2020 screenshot: press/media screenshot originally linked from DNA; Trackmania © Ubisoft / Nadeo.
-- AMD Radeon photo: [Padgriffin](https://commons.wikimedia.org/wiki/File:AMD_Radeon_RX9060XT.png), under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
-- The Rafale imagery is the owner's previously deployed creative asset.
+The site defaults to English and offers a French switch. The content is available with JavaScript disabled. The camera, project tilt, flyby, and lab sweep respect reduced-motion settings.
 
 ## Preview
 
-```sh
-python -m http.server 8000
-```
+Run `python -m http.server 8000` in this directory and open http://localhost:8000. The site is static and uses local images only. The `main` branch serves the custom domain through GitHub Pages.
 
-Visit `http://localhost:8000`. Deployment uses GitHub Pages with `speedstu.tech` configured as custom domain.
+## Imagery
 
-**Security:** Keep Name.com tokens and GitHub credentials outside this repository. HTTPS enforcement depends on GitHub Pages issuing the domain certificate; check that separately.
+The cover and project illustrations were generated with OpenAI ImageGen for this design. The project illustrations are conceptual scenes. The flyby uses the existing `assets/rafale-v1.webp`.
+
+Previously used assets remain in the repository. The Radeon photograph is by [Padgriffin](https://commons.wikimedia.org/wiki/File:AMD_Radeon_RX9060XT.png) under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). The Rocket League and Trackmania images are gameplay illustrations sourced from TechSpot and DNA respectively.
