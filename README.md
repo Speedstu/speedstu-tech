@@ -1,17 +1,14 @@
 # speedstu.tech
 
-Personal portfolio for Rocket League bots, Trackmania simulation, and CUDA experiments on AMD hardware.
-
-The cover has a pointer- and scroll-responsive camera. Flight mode brings the aircraft closer and opens a viewfinder. The short scroll transition uses the original Rafale cutout and seven poses from V1 and V14. The project gallery links to public repositories, and the lab documents simulation, reinforcement learning, and GPU experiments.
-
-The site defaults to English and offers a French switch. The content is available with JavaScript disabled. The camera, project tilt, flyby, and lab sweep respect reduced-motion settings.
+Personal portfolio for Rocket League bots, Trackmania simulation and CUDA experiments on AMD hardware. The site defaults to English and offers a French switch. The page content and links are available without JavaScript.
 
 ## Preview
 
-Run `python -m http.server 8000` in this directory and open http://localhost:8000. The site is static and uses local images only. The `main` branch serves the custom domain through GitHub Pages.
+Run `python -m http.server 8000` in this directory and open http://localhost:8000. GitHub Pages serves the `main` branch at the custom domain.
 
-## Imagery
+## Media
 
-The cover and project illustrations were generated with OpenAI ImageGen for this design. The project illustrations are conceptual scenes. The flyby uses the existing `assets/rafale-v1.webp`.
-
-Previously used assets remain in the repository. The Radeon photograph is by [Padgriffin](https://commons.wikimedia.org/wiki/File:AMD_Radeon_RX9060XT.png) under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). The Rocket League and Trackmania images are gameplay illustrations sourced from TechSpot and DNA respectively.
+- The Rafale artwork is from an earlier version of the site.
+- The Rocket League and Trackmania visuals are resized gameplay illustrations originally sourced from TechSpot and DNA, respectively.
+- The Radeon photograph is by [Padgriffin](https://commons.wikimedia.org/wiki/File:AMD_Radeon_RX9060XT.png) under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
+- Instrument Serif and Manrope are self-hosted under the SIL Open Font License. Their license files are in `assets/fonts/`.
